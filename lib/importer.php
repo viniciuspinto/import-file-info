@@ -52,7 +52,7 @@ class Importer {
     }
 
     public function getExtension($fileName) {
-        $dot = strrpos($fileName, '.');
+        $dot = mb_strrpos($fileName, '.');
         return ($dot !== FALSE ? mb_strtolower(mb_substr($fileName, $dot + 1)) : '');
     }
 
